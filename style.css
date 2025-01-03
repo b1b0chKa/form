@@ -1,0 +1,164 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+body{
+    margin: 0;
+}
+form{
+    height: auto;
+    padding-left: 300px ;
+    margin-left: 300px;
+    width: 800px;
+}
+
+div {
+    padding:7.5px 7.5px 7.5px 0;
+    display: block;
+}
+/* #pol{
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 140px;
+    height: 50px;
+    visibility: hidden;
+} */
+#textForSex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* position: relative;
+    border: 1px solid gray;
+    width: 140px;
+    border-radius: 6px;
+    height: 50px;
+    padding: 0; */
+}
+
+
+
+
+
+
+  input[type="radio"] {
+    display: none;
+  }
+  input[type="radio"]:checked+label {
+    color: #FF8C00;
+    border: 1px solid #FF8C00;
+  }
+  label[id="textForSex"] {
+    display: block;
+    float: left;
+    position: relative;
+    border: 1px solid gray;
+    width: 140px;
+    border-radius: 6px;
+    height: 50px;
+    padding: 0;
+    
+    font-size: 14px;
+    cursor: pointer;
+  }
+  label[id="textForSex"] {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  label[id="textForSex"] {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    margin-left: -1px;
+  }
+
+
+
+
+
+
+
+    
+
+#img{
+    width: 20px;
+    height: 15px;
+}
+
+.mailText{
+    padding-right: 15px;
+}
+#sex{
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+/* #man:checked{
+    background-color: #FF8C00;
+    color: white;
+}
+#woman:checked{
+    background-color: #FF8C00;
+    color: white;
+} */
+/* span{
+    position: relative;
+    padding-left: 10px;
+    top: 14px;
+} */
+
+input{
+    font-size: medium;
+    padding-left: 10px;
+    border-radius: 6px;
+    border-color: gray;
+    border-width: 1px;
+    display: inline-block;
+    height: 50px;
+    width: 400px;
+}
+
+
+label{
+    display: block;
+
+    padding-top: 10px;
+    padding-bottom: 3px;
+}
+#numbers{
+    display: flex;
+
+}
+#first_number{
+    float: none;
+    width: 195px;
+
+}
+#second_number{
+    width: 195px;
+    padding-left: 5px;
+}
+.fuck{
+    display: inline-block;
+}
+select{
+    border-radius: 6px;
+    height: 50px;
+    width: 120px;
+}
+#button{
+    background-color: #FF8C00;
+    width: 300px;
+    height: 50px;
+    border: 0;
+    border-radius: 6px;
+    padding-left: 10px;
+    color: white;
+    font-size: medium;
+}
+
+#number_1{
+    padding: 0;
+    padding-right: 10px;
+}
+#number_2{
+    padding: 0;
+}
