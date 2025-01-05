@@ -7,41 +7,41 @@
         <meta charset="UTF-8">
     </head>
     <body>
-        <form action="" id="form" method="post">
+        <form action="index.php" id="form" method="post">
 
             <h2 id="prifile">Мой профиль</h2>
 
             <div id="form_mail">
                 <label for="email" id="mail">E-mail*</label>
-                <input type="email" id="email" autocomplete="off" name="email">
+                <input type="email" id="email" autocomplete="off" name="email" required>
             </div>
             <div id="numbers">
                 <div id="number_1">
                     <label for="first_number" id="text_for_first_number">Номер телефона*</label>
-                    <input type="phone" id="first_number" name="firstNumber" autocomplete="off">
+                    <input type="phone" id="first_number" name="firstNumber" autocomplete="off" required>
                 </div>
                 <div id="number_2">
                     <label for="second_number" id="text_for_second_number">Дополнительный номер</label>
-                    <input type="phone" id="second_number" name="secondNumber" autocomplete="off">
+                    <input type="phone" id="second_number" name="secondNumber" autocomplete="off" >
                 </div>
             </div>
 
             <div id="initialis">
                 <label for="surname" id="text_for_surname">Фамилия</label>
-                <input type="text" id="surname" autocomplete="off" name="surname">
+                <input type="text" id="surname" autocomplete="off" name="surname" required>
 
                 <label for="name" id="text_for_name">Имя</label>
-                <input type="text" id="name" autocomplete="off" name="name">
+                <input type="text" id="name" autocomplete="off" name="name" required>
 
                 <label for="middle_name" id="text_for_middle_name">Отчество</label>
-                <input type="text" id="middle_name" autocomplete="off" name="midleName">
+                <input type="text" id="middle_name" autocomplete="off" name="midleName" required>
             </div>
 
             <div id="date_of_birth">
 
                 <p id="name_date_of_birth">Дата рождения</p>
-                <select name="day" id="day">
-                    <option value="day" >День</option>
+                <select name="day" id="day" required>
+                    <option>День</option>
                     <script>
                         let i = 0;
                         while(i<30)
@@ -51,7 +51,7 @@
                         }
                     </script>
                 </select>
-                <select id="month" name="month" > 
+                <select id="month" name="month" required> 
                     <option >Месяц</option>
                     <option >Январь</option> 
                     <option>Февраль</option> 
@@ -67,8 +67,8 @@
                     <option>Декабрь</option> 
                 </select>
 
-                <select id="year" name="year">
-                    <option value="year" >Год</option>
+                <select id="year" name="year" required>
+                    <option>Год</option>
                     <script>
                         let y = 1950;
                         while(y<2025){
@@ -82,13 +82,13 @@
             </div>
             <label for="sex" id="div_man">Пол</label>
             <div id="sex">
-                <input type="radio" name="pol" id="male" autocomplete="off" value="man">
+                <input type="radio" name="pol" id="male" autocomplete="off" value="man" required>
                 <label for="male" id="textForSex" class="mailText">Мужской</label>
                     <!-- <img src="tick_black.svg" alt="img" id="img"> -->
                     <!-- <span>Мужской</span><img src="tick_black.svg" alt="img"> -->
                 
                 
-                <input type="radio" name="pol" id="female" autocomplete="off" value="woman">
+                <input type="radio" name="pol" id="female" autocomplete="off" value="woman" required>
                 <label for="female" id="textForSex">Женский</label>
                     <!-- <img src="tick_orange.svg" alt="img" id="img"> -->
                 
@@ -97,9 +97,6 @@
             <div id="btn">
                 <input type="submit" id="button" value="Сохранить изменения">
                 <script>
-                    // document.getElementById('form').addEventListener('submit', function(event) {
-                    //   event.preventDefault();
-                    // });
                     document.addEventListener('DOMContentLoaded', function() {
                         const form = document.getElementById('form');
                         form.addEventListener('submit', formSend);  
@@ -118,6 +115,7 @@
                         
                     }
                 </script>
+
             </div>
         </form>
     </body>
