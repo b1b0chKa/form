@@ -4,67 +4,41 @@
 $error = [];
 
 
-if (isset($_POST["email"]))
+
+if (empty($_POST["email"]))
 {
-    if (empty($_POST["email"]) && $_POST["email"] !== "")
-    {
-        $error["email"] = "Это обязательное поле!";
-    }
-    else
-    {
-        $email = $_POST["email"];
-    }
+    $error["email"] = "Это обязательное поле!";
 }
 
 
 
-if(empty($_POST["name"] && $_POST["name"] !== ""))
+
+if(empty($_POST["name"]))
 {
     $error["name"] = "Это обязательное поле!";
 }
-else
-{
-    $name = $_POST["name"];
-}
 
 
 
-if(empty($_POST["surname"] && $_POST["surname"] !== ""))
+if(empty($_POST["surname"]))
 {
     $error["surname"] = "Это обязательное поле!";
 }
-else
-{
-    $surname = $_POST["surname"];
-}
 
-
-if(empty($_POST["midleName"] && $_POST["midleName"] !== ""))
+if(empty($_POST["midleName"]))
 {
     $error["midleName"] = "Это обязательное поле!";
 }
-else
-{
-    $midleName = $_POST["midleName"];
-}
 
 
-if(empty($_POST["firstNumber"] && $_POST["firstNumber"] !== ""))
+if(empty($_POST["firstNumber"]))
 {
     $error["firstNumber"] = "Это обязательное поле!";
 }
-else
-{
-    $firstNumber = $_POST["firstNumber"];
-}
 
-function getDopNumb()
+if(!empty($_POST["secondNumber"]))
 {
-    if(isset($_POST["secondNumber"]))
-    {
-        $secondNumber = $_POST["secondNumber"];
-        return $dopNumb = "Ваш дополнительный номер телефонa:" . $secondNumber;
-    }
+    $secondNumber = $_POST["secondNumber"];
 }
 
 if(empty($_POST["day"] && $_POST["day"] != "День"))
@@ -99,19 +73,19 @@ else
 }
 
 
-
-if(empty($_POST["pol"] && $_POST["pol"] !== ""))
+if(empty($_POST["pol"]))
 {
     $error["pol"] = "Это обязательное поле!";
 }
-else
-{
-    $pol = $_POST["pol"];
+
+if (!empty($error)) {
+    echo ['success' => false, 'errors' => $error];
+    exit();
 }
 
 
 $response = [
-    "success" => empty($error) ? "true" : "false", 
+    "success" => empty($error) ? true : false, 
     "errors" => empty($error) ? "" : $error
 ];
 
@@ -128,6 +102,7 @@ echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 // $theme = "Form";
 // $messege = "Ваш email: ".$email."<br>";   
 // $messege .= "Ваш номер телефона: ".$firstNumber."<br>";
+// $messege .= "Ваш доплнительный номер телефона: ".$secondNumber;
 // $messege .= "Ваше имя: ".$name."<br>";
 // $messege .= "Ваша фамилия: ".$surname."<br>";
 // $messege .= "Ваше отчество: ".$midleName."<br>";

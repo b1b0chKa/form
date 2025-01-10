@@ -13,12 +13,12 @@
 
             <div id="form_mail">
                 <label for="email" id="mail">E-mail*</label>
-                <input type="email" id="email" autocomplete="off" name="email" required>
+                <input type="email" id="email" autocomplete="off" name="email" >
             </div>
             <div id="numbers">
                 <div id="number_1">
                     <label for="first_number" id="text_for_first_number">Номер телефона*</label>
-                    <input type="phone" id="first_number" name="firstNumber" autocomplete="off" required>
+                    <input type="phone" id="first_number" name="firstNumber" autocomplete="off" >
                 </div>
                 <div id="number_2">
                     <label for="second_number" id="text_for_second_number">Дополнительный номер</label>
@@ -28,19 +28,19 @@
 
             <div id="initialis">
                 <label for="surname" id="text_for_surname">Фамилия</label>
-                <input type="text" id="surname" autocomplete="off" name="surname" required>
+                <input type="text" id="surname" autocomplete="off" name="surname" >
 
                 <label for="name" id="text_for_name">Имя</label>
-                <input type="text" id="name" autocomplete="off" name="name" required>
+                <input type="text" id="name" autocomplete="off" name="name" >
 
                 <label for="middle_name" id="text_for_middle_name">Отчество</label>
-                <input type="text" id="middle_name" autocomplete="off" name="midleName" required>
+                <input type="text" id="middle_name" autocomplete="off" name="midleName" >
             </div>
 
             <div id="date_of_birth">
 
                 <p id="name_date_of_birth">Дата рождения</p>
-                <select name="day" id="day" required>
+                <select name="day" id="day" >
                     <option>День</option>
                     <script>
                         let i = 0;
@@ -51,7 +51,7 @@
                         }
                     </script>
                 </select>
-                <select id="month" name="month" required> 
+                <select id="month" name="month" > 
                     <option >Месяц</option>
                     <option >Январь</option> 
                     <option>Февраль</option> 
@@ -82,13 +82,13 @@
             </div>
             <label for="sex" id="div_man">Пол</label>
             <div id="sex">
-                <input type="radio" name="pol" id="male" autocomplete="off" value="man" required>
+                <input type="radio" name="pol" id="male" autocomplete="off" value="man" >
                 <label for="male" id="textForSex" class="mailText">Мужской</label>
                     <!-- <img src="tick_black.svg" alt="img" id="img"> -->
                     <!-- <span>Мужской</span><img src="tick_black.svg" alt="img"> -->
                 
                 
-                <input type="radio" name="pol" id="female" autocomplete="off" value="woman" required>
+                <input type="radio" name="pol" id="female" autocomplete="off" value="woman" >
                 <label for="female" id="textForSex">Женский</label>
                     <!-- <img src="tick_orange.svg" alt="img" id="img"> -->
                 
@@ -107,7 +107,7 @@
 
                         const formData = new FormData(e.target);
     
-                        let response = await fetch('http://localhost:9000/' ,{
+                        let response = await fetch('http://localhost:9000/form/index.php' ,{
                             method :'POST',
                             mode : 'cors',  
                             body: formData,
